@@ -1,0 +1,31 @@
+html, body {
+position: absolute;
+    overflow: auto;
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+h1{
+font-size:xx-large;}
+.background-img { 
+  background: url(n.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+   object-fit:contain;
+opacity:0.2;
+}
+
+
+.background{
+opacity:0.2;
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:auto;
+   min-height: 100%;
+   min-width:100%;}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Detection Test</title>
+ <link rel="stylesheet" href="styles.css" >
+  
+</head>
+
+
+<body>
+<div class="wrap">
+ <img
+    class="background"
+    src="n.jpg"
+    alt=""
+  >
+<div align="center">
+<h1 >Custom Object Detection</h1><p>
+<h2 >Upload an image and click submit</h2>
+</div>
+
+<div align="center">
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+	<p >
+		<input type="file" name="file" autocomplete="off" required>
+	</p>
+    </dl>
+    <p >
+	<input type="submit" name="submit" value="Submit">
+    </p>
+</form>
+</div>
+
+<div align="center">
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+        Detections are shown in the image below: <u><h3 >{{ messages[0] }}</h3></u><br>
+        <img src="{{ messages[1] }}" width="50%", height="50%">
+       
+	  {% endif %}
+	{% endwith %}
+</p>
+</div>
+</div>
+</body>
+</html>
+
